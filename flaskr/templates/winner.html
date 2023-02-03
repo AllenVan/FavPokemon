@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winner</title>
+
+<style>
+    img {
+            max-width: 70vw;
+            max-height: 70vh;
+        }
+    
+    div {
+            text-align: center;
+            margin-top: 10vh;
+            
+        }
+
+    body {
+            background-image: url("/images/background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+    }
+
+    h1 {
+            font-family: "Lucida Console";
+            font-weight: bold;
+        }
+</style>
+</head>
+<body>
+    <h1 style="position: absolute; top: 0; width:99vw; text-align:center;">You Chose</h1>
+
+    <div>
+        <img src="{{ user_image }}" id="myImage1" alt="User Image"/>
+    </div>
+</body>
+
+<footer>
+    <h1 style="position: absolute; bottom: 0; width:99vw; text-align:center;">{{ name }}</h1>
+</footer>
+</html>

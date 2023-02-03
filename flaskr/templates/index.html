@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <style>
+
+        div.left {
+            float: left;
+            margin-left: 5vw;
+            margin-top: 10vh;
+            display:block;
+            width: auto;
+            height: 80vh;
+            background-image: url("/images/blue.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        div.right {
+            float: right;
+            margin-right: 5vw;
+            margin-top: 10vh;
+            display:block;
+            width: auto;
+            height: 80vh;
+            background-image: url("/images/red.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        img {
+            max-width: 80%;
+            max-height: 80%;
+            /* margin-left: 25%; */
+            margin-top: 25%;
+            padding-bottom: 5%;
+        }
+
+        button {
+            border-radius: 6px;
+            padding: 16px 32px;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:active{
+            transform: translateY(4px);
+        }
+
+        button.left {
+            background-color: white; 
+            border: 2px solid #b0e0fa;
+            color: #b0e0fa;
+            
+        }
+
+        button.left:hover {
+            background-color:#b0e0fa;
+            color: white;
+        }
+
+        button.right {
+            background-color: white; 
+            border: 2px solid #e18383;
+            color: #e18383;
+        }
+
+        button.right:hover {
+            background-color:#e18383;
+            color: white;
+        }
+
+        h1 {
+            font-family: "Lucida Console";
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+
+        <div class="left">
+            <img src="{{ user_image1 }}" id="myImage1" alt="User Image"/>
+
+            <form action="#" method="POST" align="center">
+                <button class="left" type=submit value="Left" name="Location">{{ name1 }}</button>
+            </form>
+        </div>
+       
+
+        <div class="right">
+            <img src="{{ user_image2 }}" id="myImage2" alt="User Image"/>
+
+            <form action="#" method="POST" align="center">
+                <button class="right" type=submit value="Right" name="Location">{{ name2 }}</button>
+            </form>
+        </div>
+
+</body>
+
+<footer>
+    <h1 style="position: absolute; bottom: 0; width:99vw; text-align:center;">You have {{ remaining }} left</h1>
+</footer>
+</html>
