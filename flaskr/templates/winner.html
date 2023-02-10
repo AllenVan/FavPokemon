@@ -12,30 +12,59 @@
             max-height: 70vh;
         }
     
-    div {
-            text-align: center;
-            margin-top: 10vh;
-            
+    div.container {
+        height: 80%;
+        width: 99vw;
+        margin-top: 10vh;
+        display: flex; 
         }
 
-    body {
-            background-image: url("/images/background.png");
-            background-size: cover;
+    div.image_wrapper{
+            display: inline-block;
+            margin: 0 auto;
+            background-image: url("/images/gray.png");
+            background-size: contain;
             background-repeat: no-repeat;
     }
 
     h1 {
             font-family: "Lucida Console";
             font-weight: bold;
-        }
+    }
+
+    .rotate {
+            animation: rotation 2s;
+    }
+
+    .linear {
+            animation-timing-function: linear;
+    }
+
+    .infinite {
+            animation-iteration-count: infinite;
+    }
+
+    @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+    }
+
 </style>
 </head>
 <body>
     <h1 style="position: absolute; top: 0; width:99vw; text-align:center;">You Chose</h1>
 
-    <div>
-        <img src="{{ user_image }}" id="myImage1" alt="User Image"/>
+    <div class = "container">
+        <div class = "image_wrapper">
+            <img src="{{ user_image }}" class="rotate linear infinite" id="myImage1" alt="User Image"/>
+        </div>
     </div>
+
+
 </body>
 
 <footer>

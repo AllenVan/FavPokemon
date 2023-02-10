@@ -9,7 +9,8 @@ class dataClass:
 
     def reset(self):
         self.selection = list(range(1, 152))
-        return self.selection
+        self.resample()
+        return
 
     def resample(self):
 

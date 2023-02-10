@@ -1,5 +1,6 @@
 import os, json
 from flask import Flask
+from flask import render_template
 
 
 
@@ -25,15 +26,17 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    
+    from flaskr import home
+    app.register_blueprint(home.bp, url_prefix="/" )
+
     # a simple page that says hello
     @app.route('/')
-    def hello():
-        return 'Hello, World!'
+    def launch():
+        return render_template("launchPage.html")
 
     # apply the blueprints to the app
-    from flaskr import home
-
-    app.register_blueprint(home.bp, url_prefix="/" )
+    
 
     # make url_for('index') == url_for('blog.index')
     # in another app, you might define a separate main index here with
