@@ -72,6 +72,21 @@
             color: white;
         }
 
+        button.restart {
+            border-radius: 2px;
+            padding: 4px 4px;
+            font-size: 14px;
+            margin: 2px 2px;
+            cursor: pointer;
+            background-color: transparent; 
+            border: none;
+        }
+
+        button.restart:active {
+            transform: none;
+        }
+       
+
         h1 {
             font-family: "Lucida Console";
             font-weight: bold;
@@ -102,5 +117,9 @@
 
 <footer>
     <h1 style="position: absolute; bottom: 0; width:99vw; text-align:center;">You have {{ remaining }} left</h1>
+
+    <form action="/select" align="right" style="position: absolute; bottom: 0; right:0;">
+        <button class="restart" type=submit name="Reset"> Restart? </button>
+    </form>
 </footer>
 </html>

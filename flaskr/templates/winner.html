@@ -53,6 +53,18 @@
             }
     }
 
+    button.restart {
+            border-radius: 2px;
+            padding: 4px 4px;
+            font-size: 14px;
+            margin: 2px 2px;
+            cursor: pointer;
+            background-color: transparent; 
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+    }
+
 </style>
 </head>
 <body>
@@ -69,5 +81,9 @@
 
 <footer>
     <h1 style="position: absolute; bottom: 0; width:99vw; text-align:center;">{{ name }}</h1>
+
+    <form action="/select" align="right" style="position: absolute; bottom: 0; right:0;">
+        <button class="restart" type=submit name="Reset"> Restart? </button>
+    </form>
 </footer>
 </html>
